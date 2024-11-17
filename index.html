@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskControl</title>
+    <style>
+        /* Estilo geral do corpo */
+        body {
+            font-family: 'Poppins', sans-serif; /* Fonte usada */
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Fundo claro */
+            color: #333; /* Texto cinza escuro */
+        }
+
+        /* Cabeçalho principal */
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #8e44ad, #3498db); /* Gradiente azul/roxo */
+            color: white; /* Texto branco */
+            font-size: 3rem;
+        }
+
+        /* Contêiner geral */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Seções individuais */
+        .section {
+            display: flex; /* Alinha imagem e texto lado a lado */
+            flex-wrap: wrap; /* Quebra para outra linha em telas menores */
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 20px;
+            background: white; /* Fundo branco */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+        }
+
+        /* Estilo das imagens nas seções */
+        .section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px; /* Bordas arredondadas para imagens */
+            margin-right: 20px;
+        }
+
+        /* Área de conteúdo textual das seções */
+        .section-content {
+            flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+        }
+
+        /* Títulos das seções */
+        .section-content h2 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+            color: #8e44ad; /* Roxo */
+        }
+
+        /* Descrição dentro das seções */
+        .section-content p {
+            font-size: 1.3rem;
+            margin: 10px 0;
+            color: #555; /* Texto em cinza mais claro */
+        }
+
+        /* Botões das seções */
+        .section-content button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold; /* Texto em negrito */
+            background-color: #3498db; /* Azul */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out; /* Animação suave ao passar o mouse */
+        }
+
+        /* Efeito hover nos botões */
+        .section-content button:hover {
+            background-color: #8e44ad; /* Muda para roxo ao passar o mouse */
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333; /* Fundo escuro */
+            color: white; /* Texto branco */
+            margin-top: 40px;
+        }
+
+        /* Links das redes sociais no rodapé */
+        footer .social-links a {
+            margin: 0 10px;
+            color: white; /* Texto branco */
+            font-size: 1.1rem; /* Tamanho do texto */
+            text-decoration: none; /* Remove sublinhado */
+            transition: color 0.3s; /* Efeito de transição ao passar o mouse */
+        }
+
+        /* Efeito hover nos links das redes sociais */
+        footer .social-links a:hover {
+            color: #3498db; /* Azul ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho principal -->
+    <h1>TaskControl</h1>
+    <div class="container">
+        <!-- Primeira seção: Agenda -->
+        <div class="section">
+            <img src="https://i.pinimg.com/736x/12/19/ed/1219edd624fa00b83123cfceed57b3b8.jpg" alt="Gerenciar Agenda">
+            <div class="section-content">
+                <h2>Gerenciar Agenda</h2>
+                <p>Cadastre, organize e gerencie os contatos de pessoas com nossa funcionalidade de agenda inteligente. Ordene, pesquise e mantenha seus dados organizados de forma prática.</p>
+                <button onclick="window.location.href='agenda.html'">Acessar</button>
+            </div>
+        </div>
+
+        <!-- Segunda seção: Controle de Notas -->
+        <div class="section">
+            <img src="https://i.pinimg.com/736x/1e/c5/5e/1ec55efb891e15adac3c03f75ff100d3.jpg" alt="Controle de Notas">
+            <div class="section-content">
+                <h2>Controle de Notas</h2>
+                <p>Gerencie as notas bimestrais de seus alunos, calcule médias e classifique automaticamente. Veja quem foi aprovado e reprovado em um sistema simples e eficaz.</p>
+                <button onclick="window.location.href='notas.html'">Acessar</button>
+            </div>
+        </div>
+
+        <!-- Terceira seção: Nome e Altura -->
+        <div class="section">
+            <img src="https://i.pinimg.com/736x/1e/68/54/1e685473d939b5d00a0cd50c69fd3147.jpg" alt="Nome e Altura">
+            <div class="section-content">
+                <h2>Nome e Altura</h2>
+                <p>Registre e analise informações de altura com filtros personalizados. Descubra pessoas dentro de intervalos específicos ou visualize estatísticas como média de altura.</p>
+                <button onclick="window.location.href='altura.html'">Acessar</button>
+            </div>
+        </div>
+
+        <!-- Quarta seção: Funcionários -->
+        <div class="section">
+            <img src="https://i.pinimg.com/736x/a4/77/b6/a477b6e776ce4838628ae256d5908dfb.jpg" alt="Gerenciar Funcionários">
+            <div class="section-content">
+                <h2>Gerenciar Funcionários</h2>
+                <p>Controle os dados de funcionários com matrícula e salário. Classifique por salário ou matrícula e obtenha insights rápidos e organizados.</p>
+                <button onclick="window.location.href='funcionarios.html'">Acessar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Iasmelo" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/iasmymmelo/" target="_blank" title="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 TaskControl. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

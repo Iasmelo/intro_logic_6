@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskControl - Controle de Notas</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            color: white;
+            font-size: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            color: rgb(0, 0, 0);
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .menu {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .menu button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .menu button:hover {
+            background-color: #3498db;
+        }
+
+        #form-container, #pesquisa-container {
+            display: none;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #form-container input, #pesquisa-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #form-container button, #pesquisa-container button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #form-container button:hover, #pesquisa-container button:hover {
+            background-color: #8e44ad;
+        }
+
+        #output {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #8e44ad;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+        footer .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.0rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer .social-links a:hover {
+            color: #3498db;
+        }
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>TaskControl</h1>
+    <div class="container">
+        <h2>Gerenciar Notas</h2>
+        <div class="menu">
+            <button onclick="mostrarFormulario()">Cadastrar Aluno</button>
+            <button onclick="mostrarPesquisa()">Pesquisar Aluno</button>
+            <button onclick="apresentarRegistros()">Exibir Registros</button>
+            <button onclick="window.location.href='index.html'">Voltar ao Menu</button>
+        </div>
+        <div id="form-container">
+            <h3>Cadastrar Aluno</h3>
+            <input type="text" id="nome" placeholder="Nome do Aluno" required>
+            <input type="number" id="nota1" placeholder="1ª Nota" min="0" max="10" required>
+            <input type="number" id="nota2" placeholder="2ª Nota" min="0" max="10" required>
+            <button onclick="adicionarRegistro()">Salvar</button>
+        </div>
+        <div id="pesquisa-container">
+            <h3>Pesquisar Aluno</h3>
+            <input type="text" id="nome-pesquisa" placeholder="Digite o nome do aluno" required>
+            <button onclick="pesquisarRegistro()">Pesquisar</button>
+        </div>
+        <div id="output">
+            <p>Use os botões acima para gerenciar os registros.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Iasmelo" target="_blank" title="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/iasmymmelo/" target="_blank" title="LinkedIn">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 TaskControl. Todos os direitos reservados.</p>
+    </footer>
+    <script src="notas.js"></script>
+</body>
+</html>
